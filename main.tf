@@ -63,4 +63,13 @@ resource "nutanix_virtual_machine" "nutanix_virtual_machine"{
       device_type = "DISK"
     }
   }
+  disk_list {
+    device_properties {
+      disk_address = {
+        device_index = 0
+        adapter_type = "IDE"
+      }
+      device_type = "CDROM"
+    }
+  }
 }
